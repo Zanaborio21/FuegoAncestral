@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fuego Ancestral - Login</title>
+</head>
+<body>
+
+    <header id="cabeceraLogin">
+        <h1>Fuego Ancestral</h1>
+        <p>Inicia sesion para entrar a la cueva</p>
+    </header>
+
+    <nav id="navegacionLogin">
+        <ul>
+            <li><a href="index.html">Regresar al Inicio</a></li>
+            <li><a href="registrar.html">¿No tienes cuenta? Registrate aqui</a></li>
+        </ul>
+    </nav>
+
+    <main id="contenidoLogin">
+        <section id="seccionFormularioLogin">
+            <h2>Acceso de Miembros de la Tribu</h2>
+            
+            <form action="/validarLogin" method="POST" id="formularioLogin">
+                <p>
+                    Nombre de Usuario o Correo:<br>
+                    <input type="text" name="nombreUsuario" id="nombreUsuario" required>
+                </p>
+                <p>
+                    Contrasena:<br>
+                    <input type="password" name="claveUsuario" id="claveUsuario" required>
+                </p>
+                <p>
+                    <button type="submit" id="botonIngresar">Ingresar a la Cueva</button>
+                </p>
+            </form>
+
+            <p>
+                ¿Olvidaste tu acceso? Contacta al chaman de la tribu.
+            </p>
+        </section>
+    </main>
+
+    <footer id="pieLogin">
+        <p>Seguridad Ancestral Protegida - 2026</p>
+    </footer>
+
+</body>
+</html>
