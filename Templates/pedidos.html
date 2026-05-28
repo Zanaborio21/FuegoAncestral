@@ -1,64 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Fuego Ancestral - Hacer Pedido</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuego Ancestral - Historial de Caza</title>
     <link rel="stylesheet" href="../Static/estilos.css">
 </head>
 <body>
 
-    <header id="cabeceraPedido">
-        <h1>Caza tu Banquete</h1>
-        <p>Completa los datos para recibir tu racion en la cueva</p>
+    <header>
+        <h1>Historial de Caza</h1>
+        <p>Registro de banquetes rescatados por tu tribu</p>
     </header>
 
-    <nav id="navegacionPedido">
+    <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="menu.html">Regresar al Menu</a></li>
-            <li><a href="pedidos.html">Ver Mis Pedidos</a></li>
+            <li><a href="menu.html">Ver Menú</a></li>
+            <li><a href="form_pedido.html">Hacer Nuevo Pedido</a></li>
         </ul>
     </nav>
 
-    <main id="contenidoPedido">
-        <section id="seccionFormularioPedido">
-            <h2>Datos de Entrega</h2>
-            <form action="/procesarPedido" method="POST" id="formularioPedido">
-                <p>
-                    Nombre del Cliente:<br>
-                    <input type="text" name="nombreCliente" id="nombreCliente" required>
-                </p>
-                <p>
-                    Direccion de Entrega (Cueva):<br>
-                    <input type="text" name="direccionEntrega" id="direccionEntrega" required>
-                </p>
-                <p>
-                    Telefono de Contacto:<br>
-                    <input type="tel" name="telefonoContacto" id="telefonoContacto" required>
-                </p>
-                <p>
-                    Selecciona tu Plato:<br>
-                    <select name="platoSeleccionado" id="platoSeleccionado">
-                       <option value="fileteMamut">Filete de Mamut</option>
-                       <option value="huevoRaptor">Huevo de Velociraptor</option>
-                       <option value="costillasMegalodon">Costillas de Megalodon</option>
-                       <option value="ensaladaMesozoica">Ensalada Mesozoica</option>
-                       <option value="sopaLiquen">Sopa de Liquen</option>
-                       <option value="piernaDodo">Pierna de Dodo</option>
-                       <option value="patesTriceratops">Pates de Triceratops</option>
-                       <option value="bastonTigre">Baston de Tigre</option>
-                       <option value="frutasPangea">Frutas de la Pangea</option>
-                       <option value="aguaGlaciar">Agua Glaciar</option>
-                    </select>
-                </p>
-                <p>
-                    Cantidad:<br>
-                    <input type="number" name="cantidadPedido" id="cantidadPedido" min="1" value="1">
-                </p>
-                <p>
-                    <button type="submit" id="botonEnviarPedido">Enviar Pedido a la Tribu</button>
-                </p>
-            </form>
-            <p><a href="index.html">Cancelar y volver al inicio</a></p>
+    <main id="contenidoPrincipal">
+        <section id="seccionTablaPedidos">
+            <h2>Pedidos Realizados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Banquete (Plato)</th>
+                        <th>Raciones</th>
+                        <th>Estado de Envío</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>28/05/2026</td>
+                        <td>Filete de Mamut</td>
+                        <td>2</td>
+                        <td><span class="estado-proceso">En camino...</span></td>
+                    </tr>
+                    <tr>
+                        <td>02/04/2026</td>
+                        <td>Huevo de Velociraptor</td>
+                        <td>1</td>
+                        <td><span class="estado-entregado">Entregado</span></td>
+                    </tr>
+                    <tr>
+                        <td>21/09/2025</td>
+                        <td>Costillas de Megalodón</td>
+                        <td>3</td>
+                        <td><span class="estado-entregado">Entregado</span></td>
+                    </tr>
+                    <tr>
+                        <td>15/01/2026</td>
+                        <td>Sopa de Liquen</td>
+                        <td>1</td>
+                        <td><span class="estado-entregado">Entregado</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
@@ -72,7 +73,7 @@
     </p>
     
     <p>&copy; 2026 Isaac Tacsa - El Chaman del Codigo</p>
-</footer>
+    </footer>
 
 </body>
 </html>

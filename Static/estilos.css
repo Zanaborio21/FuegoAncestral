@@ -83,23 +83,21 @@ header p {
     to { filter: drop-shadow(0 0 15px #ff0000); }
 }
 
-#contenidoPrincipal {
-    max-width:  1000px;
+#contenidoPrincipal,
+#seccionFormularioLogin, 
+#seccionFormularioRegistro, 
+#seccionFormularioPedido {
+    max-width: 1000px;
     margin: 40px auto;
     padding: 30px;
     background: rgba(44, 31, 22, 0.85);
     border: 6px solid var(--color-piedra);
     box-shadow: 15px 15px 0px #000;
 }
+
 #seccionFormularioLogin, 
-#seccionFormularioRegistro, 
-#seccionFormularioPedido {
+#seccionFormularioRegistro {
     max-width: 600px;
-    margin: 40px auto;
-    padding: 30px;
-    background: rgba(44, 31, 22, 0.85);
-    border: 6px solid var(--color-piedra);
-    box-shadow: 15px 15px 0px #000;
 }
 
 #seccionFormularioPedido {
@@ -131,6 +129,24 @@ th {
 }
 
 td { padding: 15px; border: 2px solid #1a1a1a; text-align: center; }
+
+.estado-entregado {
+    color: #4caf50;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.estado-proceso {
+    color: var(--color-oro);
+    font-style: italic;
+    animation: palpito 2s infinite ease-in-out;
+}
+
+@keyframes palpito {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
 
 form {
     display: flex;
