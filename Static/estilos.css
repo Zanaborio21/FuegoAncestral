@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root {
+    --color-fondo: #1a120b;
+    --color-piedra: #3e2723;
+    --color-lava: #e65100;
+    --color-oro: #ffb300;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "cabecera"
+        "navegacion"
+        "contenido"
+        "pie";
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: #f5f5f5;
+    font-family: 'VT323', monospace;
+    font-size: 1.3rem;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(62, 39, 35, 0.4) 0%, transparent 10%),
+        radial-gradient(circle at 80% 70%, rgba(62, 39, 35, 0.4) 0%, transparent 15%);
+    background-size: 150px 150px;
+    background-attachment: fixed;
+}
+
+header { grid-area: cabecera; padding: 20px; }
+nav    { grid-area: navegacion; }
+main   { grid-area: contenido; padding: 20px; }
+footer { grid-area: pie; padding: 30px; }
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+nav a {
+    background: var(--color-piedra);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 4px solid #000;
+    box-shadow: inset -4px -4px 0px #2d1d19, inset 4px 4px 0px #8d6e63;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+nav a:hover {
+    background: var(--color-lava);
+    transform: translateY(-5px);
+}
+
+header h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.2rem;
+    color: var(--color-lava);
+    text-shadow: 4px 4px 0px #000;
+    text-align: center;
+    margin-bottom: 5px;
+    animation: brilloFuego 1.5s infinite alternate;
+}
+
+header p {
+    text-align: center;
+    color: var(--color-lava);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+@keyframes brilloFuego {
+    from { filter: drop-shadow(0 0 5px var(--color-lava)); }
+    to { filter: drop-shadow(0 0 15px #ff0000); }
+}
+
+#contenidoPrincipal {
+    max-width:  1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(44, 31, 22, 0.85);
+    border: 6px solid var(--color-piedra);
+    box-shadow: 15px 15px 0px #000;
+}
+#seccionFormularioLogin, 
+#seccionFormularioRegistro, 
+#seccionFormularioPedido {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(44, 31, 22, 0.85);
+    border: 6px solid var(--color-piedra);
+    box-shadow: 15px 15px 0px #000;
+}
+
+#seccionFormularioPedido {
+    max-width: 800px;
+}
+
+#contenidoPrincipal h2, #contenidoPrincipal h3 {
+    color: var(--color-oro);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(20, 20, 20, 0.9);
+    border: 8px solid var(--color-piedra);
+    box-shadow: 15px 15px 0px #000;
+}
+
+th {
+    background-color: var(--color-piedra);
+    color: var(--color-oro);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.65rem;
+    padding: 20px;
+    border-bottom: 6px solid #000;
+}
+
+td { padding: 15px; border: 2px solid #1a1a1a; text-align: center; }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    background-color: #1a120b;
+    border: 3px solid var(--color-piedra);
+    color: var(--color-oro);
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    background: #4caf50;
+    color: white;
+    border: 4px solid #000;
+    box-shadow: inset -4px -4px 0px #2e7d32;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+button:hover {
+    background: #66bb6a;
+    transform: scale(1.02);
+}
+
+#piePagina {
+    text-align: center;
+    border-top: 4px dashed var(--color-lava);
+    color: #8d6e63;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    #contenidoPrincipal, 
+    #seccionFormularioLogin, 
+    #seccionFormularioRegistro, 
+    #seccionFormularioPedido {
+        width: 90%;
+        padding: 15px;
+        box-shadow: 8px 8px 0px #000;
+    }
+
+    #seccionTablaMenu {
+        overflow-x: auto;
+    }
+}

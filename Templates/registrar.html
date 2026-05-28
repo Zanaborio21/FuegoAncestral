@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fuego Ancestral - Registro</title>
+    <link rel="stylesheet" href="../Static/estilos.css">
+</head>
+<body>
+
+    <header id="cabeceraRegistro">
+        <h1>Unete a la Tribu</h1>
+        <p>Crea tu perfil de cazador para empezar a rescatar comida</p>
+    </header>
+
+    <nav id="navegacionRegistro">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="login.html">¿Ya tienes cuenta? Inicia sesion</a></li>
+        </ul>
+    </nav>
+
+    <main id="contenidoRegistro">
+        <section id="seccionFormularioRegistro">
+            <h2>Registro de Nuevo Miembro</h2>
+            
+            <form action="/procesarRegistro" method="POST" id="formularioRegistro">
+                <p>
+                    Nombre Completo:<br>
+                    <input type="text" name="nombreCompleto" id="nombreCompleto" required>
+                </p>
+                <p>
+                    Correo Electronico:<br>
+                    <input type="email" name="correoElectronico" id="correoElectronico" required>
+                </p>
+                <p>
+                    Contrasena:<br>
+                    <input type="password" name="claveNueva" id="claveNueva" required>
+                </p>
+                <p>
+                    Confirmar Contrasena:<br>
+                    <input type="password" name="confirmarClave" id="confirmarClave" required>
+                </p>
+                <p>
+                    <button type="submit" id="botonRegistrar">Registrar Miembro</button>
+                </p>
+            </form>
+            
+            <p>
+                Al registrarte, aceptas las leyes de la cueva y el compromiso de no desperdiciar comida.
+            </p>
+        </section>
+    </main>
+
+    <footer id="pieRegistro">
+        <p>Fuego Ancestral - Proyecto Final Avance 1</p>
+    </footer>
+
+</body>
+</html>

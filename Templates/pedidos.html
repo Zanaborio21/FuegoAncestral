@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fuego Ancestral - Hacer Pedido</title>
+    <link rel="stylesheet" href="../Static/estilos.css">
+</head>
+<body>
+
+    <header id="cabeceraPedido">
+        <h1>Caza tu Banquete</h1>
+        <p>Completa los datos para recibir tu racion en la cueva</p>
+    </header>
+
+    <nav id="navegacionPedido">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html">Regresar al Menu</a></li>
+            <li><a href="pedidos.html">Ver Mis Pedidos</a></li>
+        </ul>
+    </nav>
+
+    <main id="contenidoPedido">
+        <section id="seccionFormularioPedido">
+            <h2>Datos de Entrega</h2>
+            <form action="/procesarPedido" method="POST" id="formularioPedido">
+                <p>
+                    Nombre del Cliente:<br>
+                    <input type="text" name="nombreCliente" id="nombreCliente" required>
+                </p>
+                <p>
+                    Direccion de Entrega (Cueva):<br>
+                    <input type="text" name="direccionEntrega" id="direccionEntrega" required>
+                </p>
+                <p>
+                    Telefono de Contacto:<br>
+                    <input type="tel" name="telefonoContacto" id="telefonoContacto" required>
+                </p>
+                <p>
+                    Selecciona tu Plato:<br>
+                    <select name="platoSeleccionado" id="platoSeleccionado">
+                       <option value="fileteMamut">Filete de Mamut</option>
+                       <option value="huevoRaptor">Huevo de Velociraptor</option>
+                       <option value="costillasMegalodon">Costillas de Megalodon</option>
+                       <option value="ensaladaMesozoica">Ensalada Mesozoica</option>
+                       <option value="sopaLiquen">Sopa de Liquen</option>
+                       <option value="piernaDodo">Pierna de Dodo</option>
+                       <option value="patesTriceratops">Pates de Triceratops</option>
+                       <option value="bastonTigre">Baston de Tigre</option>
+                       <option value="frutasPangea">Frutas de la Pangea</option>
+                       <option value="aguaGlaciar">Agua Glaciar</option>
+                    </select>
+                </p>
+                <p>
+                    Cantidad:<br>
+                    <input type="number" name="cantidadPedido" id="cantidadPedido" min="1" value="1">
+                </p>
+                <p>
+                    <button type="submit" id="botonEnviarPedido">Enviar Pedido a la Tribu</button>
+                </p>
+            </form>
+            <p><a href="index.html">Cancelar y volver al inicio</a></p>
+        </section>
+    </main>
+
+    <footer id="piePagina">
+    <p><strong>Fuego Ancestral:</strong> Comida tan buena que hasta los dinosaurios regresarian por una raccion.</p>
+    <p>Si el meteorito no nos extinguio, tu hambre tampoco lo hara.</p>
+    
+    <p>
+        Siguenos en la red de la tribu: 
+        <a href="https://www.instagram.com" target="_blank" id="linkInstagram">@FuegoAncestral_IG</a>
+    </p>
+    
+    <p>&copy; 2026 Isaac Tacsa - El Chaman del Codigo</p>
+</footer>
+
+</body>
+</html>
