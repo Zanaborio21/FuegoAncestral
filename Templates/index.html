@@ -6,6 +6,11 @@
 </head>
 <body>
 
+    <div id="loader-ancestral">
+        <div class="hoguera-pixel"></div>
+        <p class="texto-carga">Avivando el fuego de la tribu...</p>
+    </div>
+
     <header id="cabeceraPrincipal">
         <h1>Fuego Ancestral</h1>
         <p>Rescate de Alimentos de la Era de Piedra</p>
@@ -18,8 +23,10 @@
             <li><a href="form_pedido.html">Hacer Pedido</a></li>
             <li><a href="ofertas.html">Ofertas Especiales</a></li>
             <li><a href="pedidos.html">Mis Pedidos</a></li>
-            <li><a href="login.html">Iniciar Sesion</a></li>
-            <li><a href="registrar.html">Registrar Usuario</a></li>
+            <li id="nav-login"><a href="login.html">Iniciar Sesion</a></li>
+            <li id="nav-registrar"><a href="registrar.html">Registrar Usuario</a></li>
+            <li id="nav-perfil" style="display: none;"><a href="perfil.html" style="color: var(--color-oro); font-weight: bold;">Mi Perfil</a></li>
+            <li id="nav-logout" style="display: none;"><a href="#" id="btn-logout-tribu" style="color: #ff4500;">Desconectarse</a></li>
         </ul>
     </nav>
 
@@ -51,6 +58,8 @@
     
     <p>&copy; 2026 Isaac Tacsa - El Chaman del Codigo</p>
     </footer>
+
+    <script src="../Static/script.js"></script>
 
 </body>
 </html>

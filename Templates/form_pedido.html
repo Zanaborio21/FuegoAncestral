@@ -1,74 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fuego Ancestral - Hacer Pedido</title>
-    <link rel="stylesheet" href="../Static/estilos.css">*/
+    <title>Fuego Ancestral - Forjar Pedido</title>
+    <link rel="stylesheet" href="../Static/estilos.css">
 </head>
 <body>
 
+    <div id="loader-ancestral">
+        <div class="hoguera-pixel"></div>
+        <p class="texto-carga">Preparando los hornos de la tribu...</p>
+    </div>
+
     <header id="cabeceraPedido">
-        <h1>Caza tu Banquete</h1>
-        <p>Completa los datos para recibir tu racion en la cueva</p>
+        <h1>Forjar Pedido Ancestral</h1>
+        <p>Confirma los detalles de tu cacería antes de encender la hoguera</p>
     </header>
 
     <nav id="navegacionPedido">
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="menu.html">Regresar al Menu</a></li>
+            <li><a href="ofertas.html">Ver Ofertas</a></li>
             <li><a href="pedidos.html">Ver Mis Pedidos</a></li>
+            <li id="nav-perfil" style="display: none;"><a href="perfil.html" style="color: var(--color-oro); font-weight: bold;">Mi Perfil</a></li>
+            <li id="nav-logout" style="display: none;"><a href="#" id="btn-logout-tribu" style="color: #ff4500;">Desconectarse</a></li>
         </ul>
     </nav>
 
     <main id="contenidoPedido">
         <section id="seccionFormularioPedido">
-            <h2>Datos de Entrega</h2>
-            <form action="/procesarPedido" method="POST" id="formularioPedido">
+            <h2>Detalles de la Caza (Resumen)</h2>
+            
+            <table border="1" id="tablaResumenMochila" style="margin-bottom: 30px;">
+                <thead>
+                    <tr>
+                        <th>Alimento</th>
+                        <th>Precio Unitario</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">Cargando tus capturas del inventario...</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" style="text-align: right; font-family: 'Press Start 2P', cursive; font-size: 0.75rem; color: var(--color-oro); padding: 15px;">TOTAL GENERAL:</td>
+                        <td id="total-pedido-forjar" style="font-family: 'Press Start 2P', cursive; font-size: 0.75rem; color: var(--color-oro); font-weight: bold;">S/ 0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h2>Datos del Cazador y Envío</h2>
+            <div id="alerta-pedido-rpg" style="display: none;"></div>
+            
+            <form id="formularioPedido">
                 <p>
                     Nombre del Cliente:<br>
-                    <input type="text" name="nombreCliente" id="nombreCliente" required>
-                </p>
-                <p>
-                    Direccion de Entrega (Cueva):<br>
-                    <input type="text" name="direccionEntrega" id="direccionEntrega" required>
+                    <input type="text" id="nombreCliente" readonly>
                 </p>
                 <p>
                     Telefono de Contacto:<br>
-                    <input type="tel" name="telefonoContacto" id="telefonoContacto" required>
+                    <input type="tel" id="telefonoContacto" readonly>
                 </p>
+
                 <p>
-                    Selecciona tu Plato:<br>
-                    <select name="platoSeleccionado" id="platoSeleccionado">
-                        <option value="fileteMamut">Filete de Mamut</option>
-                        <option value="huevoRaptor">Huevo de Velociraptor</option>
-                        <option value="costillasMegalodon">Costillas de Megalodon</option>
-                        <option value="piernaDodo">Pierna de Dodo</option>
-                        <option value="aguaGlaciar">Agua Glaciar</option>
+                    Enviar a qué Cueva (Dirección):<br>
+                    <select id="direccionEntrega" required>
+                        <option value="" disabled selected>Selecciona a dónde enviar el banquete...</option>
                     </select>
                 </p>
-                <p>
-                    Cantidad:<br>
-                    <input type="number" name="cantidadPedido" id="cantidadPedido" min="1" value="1">
-                </p>
-                <p>
-                    <button type="submit" id="botonEnviarPedido">Enviar Pedido a la Tribu</button>
+
+                <p style="margin-top: 25px;">
+                    <button type="submit" id="botonEnviarPedido" style="background-color: var(--color-lava); box-shadow: inset -4px -4px 0px #b33600; width: 100%;">
+                        🔥 Enviar Pedido a la Tribu
+                    </button>
                 </p>
             </form>
-            <p><a href="index.html">Cancelar y volver al inicio</a></p>
+            <p style="text-align: center; margin-top: 20px;"><a href="index.html">Cancelar y volver al inicio</a></p>
         </section>
     </main>
 
     <footer id="piePagina">
-
-    <p><strong>Fuego Ancestral:</strong> Comida tan buena que hasta los dinosaurios regresarian por una raccion.</p>
-    <p>Si el meteorito no nos extinguio, tu hambre tampoco lo hara.</p>
-    
-    <p>
-        Siguenos en la red de la tribu: 
-        <a href="https://www.instagram.com" target="_blank" id="linkInstagram">@FuegoAncestral_IG</a>
-    </p>
-    
-    <p>&copy; 2026 Isaac Tacsa - El Chaman del Codigo</p>
+        <p><strong>Fuego Ancestral:</strong> Comida tan buena que hasta los dinosaurios regresarian por una raccion.</p>
+        <p>&copy; 2026 Isaac Tacsa - El Chaman del Codigo</p>
     </footer>
+
+    <script src="../Static/script.js"></script>
 
 </body>
 </html>

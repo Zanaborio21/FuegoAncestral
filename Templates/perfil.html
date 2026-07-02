@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fuego Ancestral - Mi Cueva</title>
+    <link rel="stylesheet" href="../Static/estilos.css">
+</head>
+<body>
+
+    <!-- Pantalla de Precarga Unificada -->
+    <div id="loader-ancestral">
+        <div class="hoguera-pixel"></div>
+        <p class="texto-carga">Abriendo los archivos de la cueva...</p>
+    </div>
+
+    <!-- Cabecera Principal Idéntica a las demás páginas -->
+    <header id="cabeceraPrincipal">
+        <h1>⚔️ PANEL DEL CAZADOR ⚔️</h1>
+        <p>Gestiona tus credenciales y zonas de entrega antes de la cacería</p>
+    </header>
+
+    <!-- Barra de Navegación Estructurada para el script.js -->
+    <nav id="navegacionPrincipal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="form_pedido.html">Hacer Pedido</a></li>
+            <li><a href="ofertas.html">Ofertas Especiales</a></li>
+            <li><a href="pedidos.html">Mis Pedidos</a></li>
+            <li id="nav-login"><a href="login.html">Iniciar Sesion</a></li>
+            <li id="nav-registrar"><a href="registrar.html">Registrar Usuario</a></li>
+            <li id="nav-perfil" style="display: none;"><a href="perfil.html" style="color: var(--color-oro); font-weight: bold;">Mi Perfil</a></li>
+            <li id="nav-logout" style="display: none;"><a href="#" id="btn-logout-tribu" style="color: #ff4500;">Desconectarse</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenedor Centrado usando la estructura de tus secciones -->
+    <main id="contenidoPrincipal">
+        
+        <section id="seccionBienvenida" style="text-align: center; margin-bottom: 25px;">
+            <h2>MI CUEVA</h2>
+            <p>Administra tu clave secreta y las coordenadas de entrega para tus banquetes.</p>
+            <div id="alerta-perfil-rpg" style="display: none; margin-top: 15px; padding: 10px; border: 2px solid var(--color-lava); font-family: 'Press Start 2P', cursive; font-size: 0.75rem;"></div>
+        </section>
+
+        <!-- Bloque Seguridad (Usa el formato de tus formularios estándar) -->
+        <section id="seccionProposito">
+            <h3>🛡️ Seguridad de la Cueva</h3>
+            <form id="formCambiarClave" style="margin-top: 15px;">
+                <p>
+                    Nueva Clave Secreta:<br>
+                    <input type="password" id="nuevaClavePerfil" required placeholder="Escribe tu nueva clave...">
+                </p>
+                <p style="margin-top: 15px;">
+                    <button type="submit" style="background-color: var(--color-oro); color: black; font-weight: bold; padding: 10px 20px; border: none; cursor: pointer;">
+                        Actualizar Clave
+                    </button>
+                </p>
+            </form>
+        </section>
+
+        <!-- Bloque Direcciones (Usa las listas y cajas limpias de tu CSS) -->
+        <section id="seccionEnlacesRpidos">
+            <h3>📍 Zonas de Entrega (Direcciones)</h3>
+            
+            <ul id="listaDireccionesPerfil" style="list-style: none; padding: 0; margin: 20px 0;">
+                <!-- Se rellena dinámicamente desde el JS -->
+            </ul>
+
+            <form id="formNuevaDireccion" style="margin-top: 15px;">
+                <p>
+                    Añadir Nueva Cueva:<br>
+                    <input type="text" id="nuevaDireccionInput" placeholder="Ej. Av. Brasil 2300, Jesús María" required>
+                </p>
+                <p style="margin-top: 15px;">
+                    <button type="submit" style="background-color: var(--color-lava); color: white; padding: 10px 20px; border: none; cursor: pointer;">
+                        ➕ Registrar Dirección
+                    </button>
+                </p>
+            </form>
+        </section>
+
+        <!-- Botón de Salida Centrado y adaptado a tu estilo de botones -->
+        <section style="text-align: center; margin-top: 30px;">
+            <button id="btn-logout-tribu" class="btn-enviar-tribu" style="background-color: #ff4500; width: auto; max-width: 300px; padding: 12px 24px; display: inline-block;">
+                🚪 ABANDONAR TRIBU
+            </button>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página Unificado -->
+    <footer id="piePagina">
+        <p><strong>Fuego Ancestral:</strong> Comida tan buena que hasta los dinosaurios regresarian por una raccion.</p>
+        <p>&copy; 2026 Isaac Tacsa - El Chaman del Codigo</p>
+    </footer>
+
+    <script src="../Static/script.js"></script>
+</body>
+</html>

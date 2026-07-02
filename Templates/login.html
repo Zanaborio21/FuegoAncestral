@@ -6,6 +6,11 @@
 </head>
 <body>
 
+    <div id="loader-ancestral">
+        <div class="hoguera-pixel"></div>
+        <p class="texto-carga">Avivando el fuego de la tribu...</p>
+    </div>
+
     <header id="cabeceraLogin">
         <h1>Fuego Ancestral</h1>
         <p>Inicia sesion para entrar a la cueva</p>
@@ -14,7 +19,10 @@
     <nav id="navegacionLogin">
         <ul>
             <li><a href="index.html">Regresar al Inicio</a></li>
-            <li><a href="registrar.html">¿No tienes cuenta? Registrate aqui</a></li>
+            <li id="nav-login"><a href="login.html">Iniciar Sesion</a></li>
+            <li id="nav-registrar"><a href="registrar.html">¿No tienes cuenta? Registrate aqui</a></li>
+            <li id="nav-perfil" style="display: none;"><a href="perfil.html" style="color: var(--color-oro); font-weight: bold;">Mi Perfil</a></li>
+            <li id="nav-logout" style="display: none;"><a href="#" id="btn-logout-tribu" style="color: #ff4500;">Desconectarse</a></li>
         </ul>
     </nav>
 
@@ -25,12 +33,15 @@
             <form action="/validarLogin" method="POST" id="formularioLogin">
                 <p>
                     Nombre de Usuario o Correo:<br>
-                    <input type="text" name="nombreUsuario" id="nombreUsuario" required>
+                    <input type="text" name="nombreUsuario" id="correoLogin" required>
                 </p>
                 <p>
                     Contrasena:<br>
-                    <input type="password" name="claveUsuario" id="claveUsuario" required>
+                    <input type="password" name="claveUsuario" id="claveLogin" required>
                 </p>
+                
+                <div id="alerta-login-rpg" style="display: none; color: #ff4500; font-family: 'Press Start 2P', cursive; font-size: 0.7rem; margin: 15px 0; border: 4px double var(--color-lava); padding: 10px; background: #000;"></div>
+
                 <p>
                     <button type="submit" id="botonIngresar">Ingresar a la Cueva</button>
                 </p>
@@ -43,8 +54,10 @@
     </main>
 
     <footer id="pieLogin">
-        <p>Seguridad Ancestral Protegida - 2026</p>
+        <p>Security Ancestral Protegida - 2026</p>
     </footer>
+
+    <script src="../Static/script.js"></script>
 
 </body>
 </html>

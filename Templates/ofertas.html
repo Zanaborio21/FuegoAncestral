@@ -6,6 +6,11 @@
 </head>
 <body>
 
+    <div id="loader-ancestral">
+        <div class="hoguera-pixel"></div>
+        <p class="texto-carga">Avivando el fuego de la tribu...</p>
+    </div>
+
     <header id="cabeceraOfertas">
         <h1>¡Ofertas a Punto de Extinguirse!</h1>
         <p>Rescata estos banquetes antes del cierre de la cueva</p>
@@ -16,58 +21,60 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="menu.html">Menu Completo</a></li>
             <li><a href="form_pedido.html">Hacer Pedido</a></li>
+            <li><a href="ofertas.html">Ver Ofertas</a></li>
+            <li><a href="pedidos.html">Mis Pedidos</a></li>
+            <li id="nav-login"><a href="login.html">Iniciar Sesion</a></li>
+            <li id="nav-registrar"><a href="registrar.html">Registrar Usuario</a></li>
+            <li id="nav-perfil" style="display: none;"><a href="perfil.html" style="color: var(--color-oro); font-weight: bold;">Mi Perfil</a></li>
+            <li id="nav-logout" style="display: none;"><a href="#" id="btn-logout-tribu" style="color: #ff4500;">Desconectarse</a></li>
         </ul>
     </nav>
 
     <main id="contenidoOfertas">
-        <section id="seccionTablaOfertas">
-            <h2>Liquidacion del Dia</h2>
-            <p>Estos productos tienen un descuento mayor por ser las ultimas raciones disponibles:</p>
+        <div class="contenedor-flex-menu">
             
-            <table border="1" id="tablaOfertasUrgentes">
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Precio Normal</th>
-                        <th>Precio Oferta</th>
-                        <th>Estado de Urgencia</th>
-                        <th>Accion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Huevo de Velociraptor</td>
-                        <td>S/ 20.00</td>
-                        <td>S/ 8.00</td>
-                        <td><strong>¡Ultimas 2 unidades!</strong></td>
-                        <td><button id="btnOferta1">Rescatar Ya</button></td>
-                    </tr>
-                    <tr>
-                        <td>Sopa de Liquen</td>
-                        <td>S/ 15.00</td>
-                        <td>S/ 5.00</td>
-                        <td><strong>¡Solo queda 1 racion!</strong></td>
-                        <td><button id="btnOferta2">Rescatar Ya</button></td>
-                    </tr>
-                    <tr>
-                        <td>Baston de Tigre</td>
-                        <td>S/ 35.00</td>
-                        <td>S/ 15.00</td>
-                        <td><strong>¡A punto de agotarse!</strong></td>
-                        <td><button id="btnOferta3">Rescatar Ya</button></td>
-                    </tr>
-                    <tr>
-                        <td>Frutas de la Pangea</td>
-                        <td>S/ 12.00</td>
-                        <td>S/ 4.00</td>
-                        <td><strong>¡Oferta termina pronto!</strong></td>
-                        <td><button id="btnOferta4">Rescatar Ya</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+            <section id="seccionTablaOfertas" class="bloque-tabla-productos">
+                <h2>Liquidacion del Dia</h2>
+                <p>Estos productos tienen un descuento mayor por ser las ultimas raciones disponibles:</p>
+                
+                <div id="notificacion-carrito" style="display: none;"></div>
 
-        <section id="seccionBeneficios">
+                <table border="1" id="tablaOfertasUrgentes">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio Normal</th>
+                            <th>Precio Oferta</th>
+                            <th>Estado de Urgencia</th>
+                            <th>Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="5">Invocando liquidaciones desde la base de datos ancestral...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="inventario-menu-lateral" class="mochila-cazador">
+                <h3 class="titulo-mochila">🍖 Tu Inventario</h3>
+                <div id="lista-inventario-vacia" class="mochila-vacia">Tu mochila está vacía...</div>
+                
+                <ul id="lista-items-carrito" class="lista-items-mochila">
+                    </ul>
+                
+                <div id="total-inventario-caja" class="pie-mochila-totales">
+                    <p class="texto-total-mochila">
+                        <span>TOTAL:</span> <span id="total-dinero-inventario">S/ 0.00</span>
+                    </p>
+                    <button id="btn-ir-pagar-tribu" class="btn-forjar-pedido">Ir a Forjar Pedido ➔</button>
+                </div>
+            </section>
+
+        </div>
+
+        <section id="seccionBeneficios" style="max-width: 1200px; margin: 30px auto; padding: 0 20px;">
             <h3>¿Por que comprar estas ofertas?</h3>
             <ul>
                 <li>Ahorras mas del 50% en tu comida.</li>
@@ -78,16 +85,18 @@
     </main>
 
     <footer id="piePagina">
-    <p><strong>Fuego Ancestral:</strong> Comida tan buena que hasta los dinosaurios regresarian por una raccion.</p>
-    <p>Si el meteorito no nos extinguio, tu hambre tampoco lo hara.</p>
-    
-    <p>
-        Siguenos en la red de la tribu: 
-        <a href="https://www.instagram.com" target="_blank" id="linkInstagram">@FuegoAncestral_IG</a>
-    </p>
-    
-    <p>&copy; 2026 Isaac Tacsa - El Chaman del Codigo</p>
+        <p><strong>Fuego Ancestral:</strong> Comida tan buena que hasta los dinosaurios regresarian por una raccion.</p>
+        <p>Si el meteorito no nos extinguio, tu hambre tampoco lo hara.</p>
+        
+        <p>
+            Siguenos en la red de la tribu: 
+            <a href="https://www.instagram.com" target="_blank" id="linkInstagram">@FuegoAncestral_IG</a>
+        </p>
+        
+        <p>&copy; 2026 Isaac Tacsa - El Chaman del Codigo</p>
     </footer>
+
+    <script src="../Static/script.js"></script>
 
 </body>
 </html>

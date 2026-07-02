@@ -6,6 +6,11 @@
 </head>
 <body>
 
+    <div id="loader-ancestral">
+        <div class="hoguera-pixel"></div>
+        <p class="texto-carga">Avivando el fuego de la tribu...</p>
+    </div>
+
     <header id="cabeceraRegistro">
         <h1>Unete a la Tribu</h1>
         <p>Crea tu perfil de cazador para empezar a rescatar comida</p>
@@ -14,7 +19,10 @@
     <nav id="navegacionRegistro">
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="login.html">¿Ya tienes cuenta? Inicia sesion</a></li>
+            <li id="nav-login"><a href="login.html">¿Ya tienes cuenta? Inicia sesion</a></li>
+            <li id="nav-registrar" style="display: none;"><a href="registrar.html">Registrar Usuario</a></li>
+            <li id="nav-perfil" style="display: none;"><a href="perfil.html" style="color: var(--color-oro); font-weight: bold;">Mi Perfil</a></li>
+            <li id="nav-logout" style="display: none;"><a href="#" id="btn-logout-tribu" style="color: #ff4500;">Desconectarse</a></li>
         </ul>
     </nav>
 
@@ -25,11 +33,19 @@
             <form action="/procesarRegistro" method="POST" id="formularioRegistro">
                 <p>
                     Nombre Completo:<br>
-                    <input type="text" name="nombreCompleto" id="nombreCompleto" required>
+                    <input type="text" name="nombreCompleto" id="nombreCompleto" placeholder="Ej: Isaac Tacsa" required>
                 </p>
                 <p>
                     Correo Electronico:<br>
-                    <input type="email" name="correoElectronico" id="correoElectronico" required>
+                    <input type="email" name="correoElectronico" id="correoElectronico" placeholder="cazador@tribu.com" required>
+                </p>
+                <p>
+                    Telefono de la Tribu:<br>
+                    <input type="tel" name="telefonoCazador" id="telefonoCazador" pattern="[0-9]{9}" placeholder="987654321" required>
+                </p>
+                <p>
+                    Direccion de tu Cueva:<br>
+                    <input type="text" name="direccionCueva" id="direccionCueva" placeholder="Ej: Jr. Leoncio Prado, Magdalena del Mar" required>
                 </p>
                 <p>
                     Contrasena:<br>
@@ -39,6 +55,9 @@
                     Confirmar Contrasena:<br>
                     <input type="password" name="confirmarClave" id="confirmarClave" required>
                 </p>
+                
+                <div id="alerta-rpg" style="display: none; color: #ff4500; font-family: 'Press Start 2P', cursive; font-size: 0.7rem; margin: 15px 0; border: 4px double var(--color-lava); padding: 10px; background: #000;"></div>
+
                 <p>
                     <button type="submit" id="botonRegistrar">Registrar Miembro</button>
                 </p>
@@ -51,8 +70,10 @@
     </main>
 
     <footer id="pieRegistro">
-        <p>Fuego Ancestral - Proyecto Final Avance 1</p>
+        <p>Fuego Ancestral - Proyecto Final Avance 3 mmwevo</p>
     </footer>
+
+    <script src="../Static/script.js"></script>
 
 </body>
 </html>

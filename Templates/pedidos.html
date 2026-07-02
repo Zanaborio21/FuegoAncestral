@@ -8,55 +8,45 @@
 </head>
 <body>
 
+    <div id="loader-ancestral">
+        <div class="hoguera-pixel"></div>
+        <p class="texto-carga">Avivando el fuego de la tribu...</p>
+    </div>
+
     <header>
         <h1>Historial de Caza</h1>
         <p>Registro de banquetes rescatados por tu tribu</p>
     </header>
 
-    <nav>
+    <nav id="navegacionPedidos">
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="menu.html">Ver Menú</a></li>
+            <li><a href="menu.html">Ver Menu</a></li>
+            <li><a href="ofertas.html">Ver Ofertas</a></li>
             <li><a href="form_pedido.html">Hacer Nuevo Pedido</a></li>
+            <li id="nav-login"><a href="login.html">Iniciar Sesion</a></li>
+            <li id="nav-registrar"><a href="registrar.html">Registrar Usuario</a></li>
+            <li id="nav-perfil" style="display: none;"><a href="perfil.html" style="color: var(--color-oro); font-weight: bold;">Mi Perfil</a></li>
+            <li id="nav-logout" style="display: none;"><a href="#" id="btn-logout-tribu" style="color: #ff4500;">Desconectarse</a></li>
         </ul>
     </nav>
 
     <main id="contenidoPrincipal">
         <section id="seccionTablaPedidos">
             <h2>Pedidos Realizados</h2>
-            <table>
+            <table id="tablaHistorialPedidos">
                 <thead>
                     <tr>
-                        <th>Fecha</th>
+                        <th>ID Pedido</th>
                         <th>Banquete (Plato)</th>
                         <th>Raciones</th>
-                        <th>Estado de Envío</th>
+                        <th>Direccion de Envio</th>
+                        <th>Estado de Envio</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>28/05/2026</td>
-                        <td>Filete de Mamut</td>
-                        <td>2</td>
-                        <td><span class="estado-proceso">En camino...</span></td>
-                    </tr>
-                    <tr>
-                        <td>02/04/2026</td>
-                        <td>Huevo de Velociraptor</td>
-                        <td>1</td>
-                        <td><span class="estado-entregado">Entregado</span></td>
-                    </tr>
-                    <tr>
-                        <td>21/09/2025</td>
-                        <td>Costillas de Megalodón</td>
-                        <td>3</td>
-                        <td><span class="estado-entregado">Entregado</span></td>
-                    </tr>
-                    <tr>
-                        <td>15/01/2026</td>
-                        <td>Sopa de Liquen</td>
-                        <td>1</td>
-                        <td><span class="estado-entregado">Entregado</span></td>
+                        <td colspan="5" style="text-align: center;">Invocando tu historial desde el servidor ancestral...</td>
                     </tr>
                 </tbody>
             </table>
@@ -64,16 +54,18 @@
     </main>
 
     <footer id="piePagina">
-    <p><strong>Fuego Ancestral:</strong> Comida tan buena que hasta los dinosaurios regresarian por una raccion.</p>
-    <p>Si el meteorito no nos extinguio, tu hambre tampoco lo hara.</p>
-    
-    <p>
-        Siguenos en la red de la tribu: 
-        <a href="https://www.instagram.com" target="_blank" id="linkInstagram">@FuegoAncestral_IG</a>
-    </p>
-    
-    <p>&copy; 2026 Isaac Tacsa - El Chaman del Codigo</p>
+        <p><strong>Fuego Ancestral:</strong> Comida tan buena que hasta los dinosaurios regresarian por una raccion.</p>
+        <p>Si el meteorito no nos extinguio, tu hambre tampoco lo hara.</p>
+        
+        <p>
+            Siguenos en la red de la tribu: 
+            <a href="https://www.instagram.com" target="_blank" id="linkInstagram">@FuegoAncestral_IG</a>
+        </p>
+        
+        <p>&copy; 2026 Isaac Tacsa - El Chaman del Codigo</p>
     </footer>
+
+    <script src="../Static/script.js"></script>
 
 </body>
 </html>
