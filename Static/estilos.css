@@ -7,7 +7,6 @@
     --color-oro: #ffb300;
 }
 
-/* --- ESTRUCTURA BASE Y PRECARGA --- */
 body {
     display: grid;
     grid-template-rows: auto auto 1fr auto;
@@ -165,7 +164,6 @@ button:hover {
     color: #8d6e63;
 }
 
-/* --- VISTA: INDEX (HOME) --- */
 #contenidoPrincipal {
     max-width: 1000px;
     margin: 40px auto;
@@ -182,7 +180,6 @@ button:hover {
     margin-top: 30px;
 }
 
-/* --- VISTAS: REGISTRO Y LOGIN --- */
 #seccionFormularioLogin, 
 #seccionFormularioRegistro {
     max-width: 600px;
@@ -193,7 +190,6 @@ button:hover {
     box-shadow: 15px 15px 0px #000;
 }
 
-/* --- VISTA: COBROS E HISTORIAL --- */
 #seccionFormularioPedido {
     max-width: 800px;
     margin: 40px auto;
@@ -238,7 +234,7 @@ td {
     animation: palpito 2s infinite ease-in-out;
 }
 
-/* --- COMPONENTES DE LA MOCHILA LATERAL --- */
+/*mochila lateral*/
 .contenedor-flex-menu {
     display: flex;
     gap: 20px;
@@ -331,7 +327,6 @@ td {
     box-shadow: inset -4px -4px 0px #b33600;
 }
 
-/* --- POP-UP RETRO DE NOTIFICACIÓN (TOAST) --- */
 .popup-notificacion-rpg {
     position: fixed;
     top: 20px;
@@ -370,7 +365,6 @@ td {
     100% { transform: scale(1.1, 0.9) translateY(-2px); filter: brightness(1.2); }
 }
 
-/* --- ADAPTACIÓN RESPONSIVE --- */
 @media (max-width: 768px) {
     nav ul { flex-direction: column; align-items: stretch; }
     nav a { text-align: center; }
